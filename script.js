@@ -13,7 +13,7 @@ emailForm.addEventListener("submit", (e) => {
     let valueEmail = document.getElementById("email").value;
     let  valueName = document.getElementById("name").value;
     let passWord = document.getElementById("password").value
-    let repatePassword = document.getElementById("password").value
+    let repatePassword = document.getElementById("repatePassword").value
     let formValidation = true;
     
     if (!emailPatterns.test(valueEmail)) {
@@ -31,12 +31,12 @@ emailForm.addEventListener("submit", (e) => {
     }
 
     if (!pasValidation.test(passWord)) {
-        passError.textContent = "Password must include a number and special character"
+        passError.textContent = "Password must include a number and special character";
         formValidation = false;
-    }else if (repatePassword !== passWord){
-        passError.textContent = "pass doesn match"
+    } else if (repatePassword !== passWord) {
+        passError.textContent = "Passwords do not match";
         formValidation = false;
-    }else {
+    } else {
         passError.textContent = "";
     }
 
